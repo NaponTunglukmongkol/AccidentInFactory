@@ -116,7 +116,7 @@ for summary in summary_all:
 accident_all = df.accident
 
 
-# In[14]:
+
 
 
 def accident_count(accident_choice):
@@ -142,18 +142,11 @@ def accident_count(accident_choice):
     a.sort(reverse=True)    
     list_top_4 = []
 
-    if len(list_top_4) > 4:
 
 
 
-        for i in range(4):
-            list_top_4.append(list(summary_fire.keys())[list(summary_fire.values()).index(a[i])])
-
-    else:
-        for i in range(3):
-            list_top_4.append(list(summary_fire.keys())[list(summary_fire.values()).index(a[i])])
-
-
+    for i in range(len(a)):
+        list_top_4.append(list(summary_fire.keys())[list(summary_fire.values()).index(a[i])])
 
     count = 0
     dic_summary_top_4 = {}
